@@ -1,9 +1,9 @@
 # api documentation for  [react-scripts (v0.9.5)](https://github.com/facebookincubator/create-react-app#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-react-scripts.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-react-scripts) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-react-scripts.svg)](https://travis-ci.org/npmdoc/node-npmdoc-react-scripts)
 #### Configuration and scripts for Create React App.
 
-[![NPM](https://nodei.co/npm/react-scripts.png?downloads=true)](https://www.npmjs.com/package/react-scripts)
+[![NPM](https://nodei.co/npm/react-scripts.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/react-scripts)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-react-scripts/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-react-scripts_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-react-scripts/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-react-scripts/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-react-scripts/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-react-scripts/build/screenCapture.npmPackageListing.svg)
 
@@ -89,19 +89,16 @@
     "license": "BSD-3-Clause",
     "maintainers": [
         {
-            "name": "gaearon",
-            "email": "dan.abramov@gmail.com"
+            "name": "gaearon"
         },
         {
-            "name": "timer",
-            "email": "timer150@gmail.com"
+            "name": "timer"
         }
     ],
     "name": "react-scripts",
     "optionalDependencies": {
         "fsevents": "1.0.17"
     },
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/facebookincubator/create-react-app.git"
@@ -116,48 +113,10 @@
 # <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
 
 #### [module react-scripts](#apidoc.module.react-scripts)
-1.  object <span class="apidocSignatureSpan">react-scripts.</span>webpack_config_dev
-
-#### [module react-scripts.webpack_config_dev](#apidoc.module.react-scripts.webpack_config_dev)
-1.  [function <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>postcss ()](#apidoc.element.react-scripts.webpack_config_dev.postcss)
-1.  object <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>entry
-1.  object <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>eslint
-1.  object <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>module
-1.  object <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>node
-1.  object <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>output
-1.  object <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>plugins
-1.  object <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>resolve
-1.  object <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>resolveLoader
-1.  string <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>devtool
 
 
 
 # <a name="apidoc.module.react-scripts"></a>[module react-scripts](#apidoc.module.react-scripts)
-
-
-
-# <a name="apidoc.module.react-scripts.webpack_config_dev"></a>[module react-scripts.webpack_config_dev](#apidoc.module.react-scripts.webpack_config_dev)
-
-#### <a name="apidoc.element.react-scripts.webpack_config_dev.postcss"></a>[function <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>postcss ()](#apidoc.element.react-scripts.webpack_config_dev.postcss)
-- description and source-code
-```javascript
-postcss = function () {
-  return [
-    autoprefixer({
-      browsers: [
-        '>1%',
-        'last 4 versions',
-        'Firefox ESR',
-        'not ie < 9', // React doesn't support IE8 anyway
-      ]
-    }),
-  ];
-}
-```
-- example usage
-```shell
-n/a
-```
 
 
 
