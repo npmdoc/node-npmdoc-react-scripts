@@ -3,6 +3,8 @@
 
 [![NPM](https://nodei.co/npm/react-scripts.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/react-scripts)
 
+- [https://npmdoc.github.io/node-npmdoc-react-scripts/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-react-scripts/build/apidoc.html)
+
 [![apidoc](https://npmdoc.github.io/node-npmdoc-react-scripts/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-react-scripts/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-react-scripts/build/screenCapture.npmPackageListing.svg)
@@ -107,16 +109,6 @@
     "version": "0.9.5"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module react-scripts](#apidoc.module.react-scripts)
-
-
-
-# <a name="apidoc.module.react-scripts"></a>[module react-scripts](#apidoc.module.react-scripts)
 
 
 
