@@ -54,12 +54,647 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.react-scripts">module react-scripts</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scripts.createJestConfig">
+            function <span class="apidocSignatureSpan">react-scripts.</span>createJestConfig
+            <span class="apidocSignatureSpan">(resolve, rootDir, isEjecting)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scripts.env">
+            function <span class="apidocSignatureSpan">react-scripts.</span>env
+            <span class="apidocSignatureSpan">(publicUrl)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scripts.init">
+            function <span class="apidocSignatureSpan">react-scripts.</span>init
+            <span class="apidocSignatureSpan">(appPath, appName, verbose, originalDirectory, template)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-scripts.</span>webpack_config_dev</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-scripts.createJestConfig">module react-scripts.createJestConfig</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scripts.createJestConfig.createJestConfig">
+            function <span class="apidocSignatureSpan">react-scripts.</span>createJestConfig
+            <span class="apidocSignatureSpan">(resolve, rootDir, isEjecting)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-scripts.env">module react-scripts.env</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scripts.env.env">
+            function <span class="apidocSignatureSpan">react-scripts.</span>env
+            <span class="apidocSignatureSpan">(publicUrl)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-scripts.init">module react-scripts.init</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scripts.init.init">
+            function <span class="apidocSignatureSpan">react-scripts.</span>init
+            <span class="apidocSignatureSpan">(appPath, appName, verbose, originalDirectory, template)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-scripts.webpack_config_dev">module react-scripts.webpack_config_dev</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-scripts.webpack_config_dev.postcss">
+            function <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>postcss
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>entry</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>eslint</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>module</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>node</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>output</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>plugins</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>resolve</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>resolveLoader</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>devtool</span>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.react-scripts" id="apidoc.module.react-scripts">module react-scripts</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-scripts.createJestConfig" id="apidoc.element.react-scripts.createJestConfig">
+        function <span class="apidocSignatureSpan">react-scripts.</span>createJestConfig
+        <span class="apidocSignatureSpan">(resolve, rootDir, isEjecting)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(resolve, rootDir, isEjecting) =&gt; {
+  // Use this instead of `paths.testsSetup` to avoid putting
+  // an absolute filename into configuration after ejecting.
+  const setupTestsFile = fs.existsSync(paths.testsSetup) ? '&lt;rootDir&gt;/src/setupTests.js' : undefined;
+
+  // TODO: I don't know if it's safe or not to just use / as path separator
+  // in Jest configs. We need help from somebody with Windows to determine this.
+  const config = {
+    collectCoverageFrom: ['src/**/*.{js,jsx}'],
+    setupFiles: [resolve('config/polyfills.js')],
+    setupTestFrameworkScriptFile: setupTestsFile,
+    testPathIgnorePatterns: [
+      '&lt;rootDir&gt;[/\\\\](build|docs|node_modules|scripts)[/\\\\]'
+    ],
+    testEnvironment: 'node',
+    testURL: 'http://localhost',
+    transform: {
+      '^.+\\.(js|jsx)$': isEjecting ?
+        '&lt;rootDir&gt;/node_modules/babel-jest'
+        : resolve('config/jest/babelTransform.js'),
+      '^.+\\.css$': resolve('config/jest/cssTransform.js'),
+      '^(?!.*\\.(js|jsx|css|json)$)': resolve('config/jest/fileTransform.js'),
+    },
+    transformIgnorePatterns: [
+      '[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'
+    ],
+    moduleNameMapper: {
+      '^react-native$': 'react-native-web'
+    }
+  };
+  if (rootDir) {
+    config.rootDir = rootDir;
+  }
+  return config;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scripts.env" id="apidoc.element.react-scripts.env">
+        function <span class="apidocSignatureSpan">react-scripts.</span>env
+        <span class="apidocSignatureSpan">(publicUrl)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getClientEnvironment(publicUrl) {
+  var raw = Object
+    .keys(process.env)
+    .filter(key =&gt; REACT_APP.test(key))
+    .reduce((env, key) =&gt; {
+      env[key] = process.env[key];
+      return env;
+    }, {
+      // Useful for determining whether weâ€™re running in production mode.
+      // Most importantly, it switches React into the correct mode.
+      'NODE_ENV': process.env.NODE_ENV || 'development',
+      // Useful for resolving the correct path to static assets in `public`.
+      // For example, &lt;img src={process.env.PUBLIC_URL + '/img/logo.png'} /&gt;.
+      // This should only be used as an escape hatch. Normally you would put
+      // images into the `src` and `import` them in code to get their paths.
+      'PUBLIC_URL': publicUrl
+    });
+  // Stringify all values so we can feed into Webpack DefinePlugin
+  var stringified = {
+    'process.env': Object
+      .keys(raw)
+      .reduce((env, key) =&gt; {
+        env[key] = JSON.stringify(raw[key]);
+        return env;
+      }, {})
+  };
+
+  return { raw, stringified };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-scripts.init" id="apidoc.element.react-scripts.init">
+        function <span class="apidocSignatureSpan">react-scripts.</span>init
+        <span class="apidocSignatureSpan">(appPath, appName, verbose, originalDirectory, template)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (appPath, appName, verbose, originalDirectory, template) {
+  var ownPackageName = require(path.join(__dirname, '..', 'package.json')).name;
+  var ownPath = path.join(appPath, 'node_modules', ownPackageName);
+  var appPackage = require(path.join(appPath, 'package.json'));
+  var useYarn = fs.existsSync(path.join(appPath, 'yarn.lock'));
+
+  // Copy over some of the devDependencies
+  appPackage.dependencies = appPackage.dependencies || {};
+  appPackage.devDependencies = appPackage.devDependencies || {};
+
+  // Setup the script rules
+  appPackage.scripts = {
+    'start': 'react-scripts start',
+    'build': 'react-scripts build',
+    'test': 'react-scripts test --env=jsdom',
+    'eject': 'react-scripts eject'
+  };
+
+  fs.writeFileSync(
+    path.join(appPath, 'package.json'),
+    JSON.stringify(appPackage, null, 2)
+  );
+
+  var readmeExists = fs.existsSync(path.join(appPath, 'README.md'));
+  if (readmeExists) {
+    fs.renameSync(path.join(appPath, 'README.md'), path.join(appPath, 'README.old.md'));
+  }
+
+  // Copy the files for the user
+  var templatePath = template ? path.resolve(originalDirectory, template) : path.join(ownPath, 'template');
+  if (fs.existsSync(templatePath)) {
+    fs.copySync(templatePath, appPath);
+  } else {
+    console.error('Could not locate supplied template: ' + chalk.green(templatePath));
+    return;
+  }
+
+  // Rename gitignore after the fact to prevent npm from renaming it to .npmignore
+  // See: https://github.com/npm/npm/issues/1862
+  fs.move(path.join(appPath, 'gitignore'), path.join(appPath, '.gitignore'), [], function (err) {
+    if (err) {
+      // Append if there's already a `.gitignore` file there
+      if (err.code === 'EEXIST') {
+        var data = fs.readFileSync(path.join(appPath, 'gitignore'));
+        fs.appendFileSync(path.join(appPath, '.gitignore'), data);
+        fs.unlinkSync(path.join(appPath, 'gitignore'));
+      } else {
+        throw err;
+      }
+    }
+  });
+
+  var command;
+  var args;
+
+  if (useYarn) {
+    command = 'yarnpkg';
+    args = ['add'];
+  } else {
+    command = 'npm';
+    args = [
+      'install',
+      '--save',
+      verbose &amp;&amp; '--verbose'
+    ].filter(function(e) { return e; });
+  }
+  args.push('react', 'react-dom');
+
+  // Install additional template dependencies, if present
+  var templateDependenciesPath = path.join(appPath, '.template.dependencies.json');
+  if (fs.existsSync(templateDependenciesPath)) {
+    var templateDependencies = require(templateDependenciesPath).dependencies;
+    args = args.concat(Object.keys(templateDependencies).map(function (key) {
+      return key + '@' + templateDependencies[key];
+    }));
+    fs.unlinkSync(templateDependenciesPath);
+  }
+
+  // Install react and react-dom for backward compatibility with old CRA cli
+  // which doesn't install react and react-dom along with react-scripts
+  // or template is presetend (via --internal-testing-template)
+  if (!isReactInstalled(appPackage) || template) {
+    console.log('Installing react and react-dom using ' + command + '...');
+    console.log();
+
+    var proc = spawn.sync(command, args, {stdio: 'inherit'});
+    if (proc.status !== 0) {
+      console.error('`' + command + ' ' + args.join(' ') + '` failed');
+      return;
+    }
+  }
+
+  // Display the most elegant way to cd.
+  // This needs to handle an undefined originalDirectory for
+  // backward compatibility with old global-cli's.
+  var cdpath;
+  if (originalDirectory &amp;&amp;
+      path.join(originalDirectory, appName) === appPath) {
+    cdpath = appName;
+  } else {
+    cdpath = appPath;
+  }
+
+  // Change displayed command to yarn instead of yarnpkg
+  var displayedCommand = useYarn ? 'yarn' : 'npm';
+
+  console.log();
+  console.log('Success! Created ' + appName + ' at ' + appPath);
+  console.log('Inside that directory, you can run several commands:');
+  console.log();
+  console.log(chalk.cyan('  ' + displayedCommand + ' start'));
+  console.log('    Starts the development server.');
+  console.log();
+  console.log(chalk.cyan('  ' + displayedCommand + ' run build'));
+  console.log('    Bundles the app into static files for production.');
+  console ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-scripts.createJestConfig" id="apidoc.module.react-scripts.createJestConfig">module react-scripts.createJestConfig</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-scripts.createJestConfig.createJestConfig" id="apidoc.element.react-scripts.createJestConfig.createJestConfig">
+        function <span class="apidocSignatureSpan">react-scripts.</span>createJestConfig
+        <span class="apidocSignatureSpan">(resolve, rootDir, isEjecting)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(resolve, rootDir, isEjecting) =&gt; {
+  // Use this instead of `paths.testsSetup` to avoid putting
+  // an absolute filename into configuration after ejecting.
+  const setupTestsFile = fs.existsSync(paths.testsSetup) ? '&lt;rootDir&gt;/src/setupTests.js' : undefined;
+
+  // TODO: I don't know if it's safe or not to just use / as path separator
+  // in Jest configs. We need help from somebody with Windows to determine this.
+  const config = {
+    collectCoverageFrom: ['src/**/*.{js,jsx}'],
+    setupFiles: [resolve('config/polyfills.js')],
+    setupTestFrameworkScriptFile: setupTestsFile,
+    testPathIgnorePatterns: [
+      '&lt;rootDir&gt;[/\\\\](build|docs|node_modules|scripts)[/\\\\]'
+    ],
+    testEnvironment: 'node',
+    testURL: 'http://localhost',
+    transform: {
+      '^.+\\.(js|jsx)$': isEjecting ?
+        '&lt;rootDir&gt;/node_modules/babel-jest'
+        : resolve('config/jest/babelTransform.js'),
+      '^.+\\.css$': resolve('config/jest/cssTransform.js'),
+      '^(?!.*\\.(js|jsx|css|json)$)': resolve('config/jest/fileTransform.js'),
+    },
+    transformIgnorePatterns: [
+      '[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'
+    ],
+    moduleNameMapper: {
+      '^react-native$': 'react-native-web'
+    }
+  };
+  if (rootDir) {
+    config.rootDir = rootDir;
+  }
+  return config;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-scripts.env" id="apidoc.module.react-scripts.env">module react-scripts.env</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-scripts.env.env" id="apidoc.element.react-scripts.env.env">
+        function <span class="apidocSignatureSpan">react-scripts.</span>env
+        <span class="apidocSignatureSpan">(publicUrl)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getClientEnvironment(publicUrl) {
+  var raw = Object
+    .keys(process.env)
+    .filter(key =&gt; REACT_APP.test(key))
+    .reduce((env, key) =&gt; {
+      env[key] = process.env[key];
+      return env;
+    }, {
+      // Useful for determining whether weâ€™re running in production mode.
+      // Most importantly, it switches React into the correct mode.
+      'NODE_ENV': process.env.NODE_ENV || 'development',
+      // Useful for resolving the correct path to static assets in `public`.
+      // For example, &lt;img src={process.env.PUBLIC_URL + '/img/logo.png'} /&gt;.
+      // This should only be used as an escape hatch. Normally you would put
+      // images into the `src` and `import` them in code to get their paths.
+      'PUBLIC_URL': publicUrl
+    });
+  // Stringify all values so we can feed into Webpack DefinePlugin
+  var stringified = {
+    'process.env': Object
+      .keys(raw)
+      .reduce((env, key) =&gt; {
+        env[key] = JSON.stringify(raw[key]);
+        return env;
+      }, {})
+  };
+
+  return { raw, stringified };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-scripts.init" id="apidoc.module.react-scripts.init">module react-scripts.init</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-scripts.init.init" id="apidoc.element.react-scripts.init.init">
+        function <span class="apidocSignatureSpan">react-scripts.</span>init
+        <span class="apidocSignatureSpan">(appPath, appName, verbose, originalDirectory, template)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (appPath, appName, verbose, originalDirectory, template) {
+  var ownPackageName = require(path.join(__dirname, '..', 'package.json')).name;
+  var ownPath = path.join(appPath, 'node_modules', ownPackageName);
+  var appPackage = require(path.join(appPath, 'package.json'));
+  var useYarn = fs.existsSync(path.join(appPath, 'yarn.lock'));
+
+  // Copy over some of the devDependencies
+  appPackage.dependencies = appPackage.dependencies || {};
+  appPackage.devDependencies = appPackage.devDependencies || {};
+
+  // Setup the script rules
+  appPackage.scripts = {
+    'start': 'react-scripts start',
+    'build': 'react-scripts build',
+    'test': 'react-scripts test --env=jsdom',
+    'eject': 'react-scripts eject'
+  };
+
+  fs.writeFileSync(
+    path.join(appPath, 'package.json'),
+    JSON.stringify(appPackage, null, 2)
+  );
+
+  var readmeExists = fs.existsSync(path.join(appPath, 'README.md'));
+  if (readmeExists) {
+    fs.renameSync(path.join(appPath, 'README.md'), path.join(appPath, 'README.old.md'));
+  }
+
+  // Copy the files for the user
+  var templatePath = template ? path.resolve(originalDirectory, template) : path.join(ownPath, 'template');
+  if (fs.existsSync(templatePath)) {
+    fs.copySync(templatePath, appPath);
+  } else {
+    console.error('Could not locate supplied template: ' + chalk.green(templatePath));
+    return;
+  }
+
+  // Rename gitignore after the fact to prevent npm from renaming it to .npmignore
+  // See: https://github.com/npm/npm/issues/1862
+  fs.move(path.join(appPath, 'gitignore'), path.join(appPath, '.gitignore'), [], function (err) {
+    if (err) {
+      // Append if there's already a `.gitignore` file there
+      if (err.code === 'EEXIST') {
+        var data = fs.readFileSync(path.join(appPath, 'gitignore'));
+        fs.appendFileSync(path.join(appPath, '.gitignore'), data);
+        fs.unlinkSync(path.join(appPath, 'gitignore'));
+      } else {
+        throw err;
+      }
+    }
+  });
+
+  var command;
+  var args;
+
+  if (useYarn) {
+    command = 'yarnpkg';
+    args = ['add'];
+  } else {
+    command = 'npm';
+    args = [
+      'install',
+      '--save',
+      verbose &amp;&amp; '--verbose'
+    ].filter(function(e) { return e; });
+  }
+  args.push('react', 'react-dom');
+
+  // Install additional template dependencies, if present
+  var templateDependenciesPath = path.join(appPath, '.template.dependencies.json');
+  if (fs.existsSync(templateDependenciesPath)) {
+    var templateDependencies = require(templateDependenciesPath).dependencies;
+    args = args.concat(Object.keys(templateDependencies).map(function (key) {
+      return key + '@' + templateDependencies[key];
+    }));
+    fs.unlinkSync(templateDependenciesPath);
+  }
+
+  // Install react and react-dom for backward compatibility with old CRA cli
+  // which doesn't install react and react-dom along with react-scripts
+  // or template is presetend (via --internal-testing-template)
+  if (!isReactInstalled(appPackage) || template) {
+    console.log('Installing react and react-dom using ' + command + '...');
+    console.log();
+
+    var proc = spawn.sync(command, args, {stdio: 'inherit'});
+    if (proc.status !== 0) {
+      console.error('`' + command + ' ' + args.join(' ') + '` failed');
+      return;
+    }
+  }
+
+  // Display the most elegant way to cd.
+  // This needs to handle an undefined originalDirectory for
+  // backward compatibility with old global-cli's.
+  var cdpath;
+  if (originalDirectory &amp;&amp;
+      path.join(originalDirectory, appName) === appPath) {
+    cdpath = appName;
+  } else {
+    cdpath = appPath;
+  }
+
+  // Change displayed command to yarn instead of yarnpkg
+  var displayedCommand = useYarn ? 'yarn' : 'npm';
+
+  console.log();
+  console.log('Success! Created ' + appName + ' at ' + appPath);
+  console.log('Inside that directory, you can run several commands:');
+  console.log();
+  console.log(chalk.cyan('  ' + displayedCommand + ' start'));
+  console.log('    Starts the development server.');
+  console.log();
+  console.log(chalk.cyan('  ' + displayedCommand + ' run build'));
+  console.log('    Bundles the app into static files for production.');
+  console ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-scripts.webpack_config_dev" id="apidoc.module.react-scripts.webpack_config_dev">module react-scripts.webpack_config_dev</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-scripts.webpack_config_dev.postcss" id="apidoc.element.react-scripts.webpack_config_dev.postcss">
+        function <span class="apidocSignatureSpan">react-scripts.webpack_config_dev.</span>postcss
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">postcss = function () {
+  return [
+    autoprefixer({
+      browsers: [
+        '&gt;1%',
+        'last 4 versions',
+        'Firefox ESR',
+        'not ie &lt; 9', // React doesn't support IE8 anyway
+      ]
+    }),
+  ];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </div>
 
