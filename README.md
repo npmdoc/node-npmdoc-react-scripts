@@ -1,4 +1,7 @@
-# api documentation for  [react-scripts (v0.9.5)](https://github.com/facebookincubator/create-react-app#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-react-scripts.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-react-scripts) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-react-scripts.svg)](https://travis-ci.org/npmdoc/node-npmdoc-react-scripts)
+# npmdoc-react-scripts
+
+#### basic api documentation for  [react-scripts (v0.9.5)](https://github.com/facebookincubator/create-react-app#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-react-scripts.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-react-scripts) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-react-scripts.svg)](https://travis-ci.org/npmdoc/node-npmdoc-react-scripts)
+
 #### Configuration and scripts for Create React App.
 
 [![NPM](https://nodei.co/npm/react-scripts.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/react-scripts)
